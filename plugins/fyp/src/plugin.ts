@@ -31,7 +31,7 @@ export const FypPage = fypPlugin.provide(
   createRoutableExtension({
     name: 'FypPage',
     component: () =>
-      import('./components/Sarah-Component').then(m => m.ExampleComponent),
+      import('./components/Sarah-Component').then(m => m.Dashboard),
     mountPoint: rootRouteRef,
   }),
 );
