@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 const freq = [5, 3, 4, 3, 4];
+const passed = 24;
+const failed = 8;
 
 export const data = [
   ['Week', 'Deployments'],
@@ -24,13 +26,19 @@ export const data = [
   ['2023-02-27', 4],
 ];
 
-export const getAverage = () => {
+export const changefail = [
+  ['Outcome', 'Volume'],
+  ['Passed', 24],
+  ['Failed', 8],
+];
+
+export const getDeploymentFrequency = () => {
   const avg = freq.reduce((a, b) => a + b) / freq.length;
   return avg;
 };
 
-export const getPerformance = () => {
-  const average = getAverage();
+export const getDFPerformance = () => {
+  const average = getDeploymentFrequency();
   if (average < 3) {
     return 'Low';
   } else if (average > 3 && average < 7) {
@@ -39,4 +47,22 @@ export const getPerformance = () => {
     return 'High';
   }
   return 'Elite';
+};
+
+export const getChangeFail = () => {
+  const ttlDeployments = passed + failed;
+  const rate = failed / ttlDeployments;
+  return rate;
+};
+
+export const getCFRPerformance = () => {
+  const rate = getChangeFail();
+  if (rate > 0.45) {
+    return 'Low';
+  } else if (rate < 0.45 && rate > 0.15) {
+    return 'Medium - High';
+  } else if (rate < 0.15) {
+    return 'Elite';
+  }
+  return 'Error';
 };
