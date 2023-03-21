@@ -14,19 +14,9 @@
  * limitations under the License.
  */
 import React from 'react';
-import {
-  Typography,
-  Grid,
-  List,
-  ListItem,
-  Button,
-  Box,
-} from '@material-ui/core';
-import BarChart from '@material-ui/icons/BarChart';
-import School from '@material-ui/icons/School';
+import { Grid } from '@material-ui/core';
 
 import {
-  InfoCard,
   Header,
   Page,
   Content,
@@ -34,8 +24,7 @@ import {
   HeaderLabel,
   SupportButton,
 } from '@backstage/core-components';
-import DeploymentFrequency from './DeploymentFrequency';
-import ChangeFailureRate from './ChangeFailureRate';
+import SimpleTabs from './Tabs';
 
 export const Dashboard = () => (
   <Page themeId="tool">
@@ -47,73 +36,14 @@ export const Dashboard = () => (
       <HeaderLabel label="Student Number" value="119482126" />
     </Header>
     <Content>
-      <ContentHeader title="DORA Metrics: Overview">
+      <ContentHeader title="DORA Metrics">
         <SupportButton>
           If you'd like to report a problem on GitHub or join Spotify's Discord,
           check out these links.
         </SupportButton>
       </ContentHeader>
       <Grid container spacing={2} direction="column">
-        <Grid item>
-          <InfoCard title="What are DORA Metrics?">
-            <Typography variant="body1">
-              DevOps and Research Assessment (DORA) metrics are a set of
-              criteria developed by Gene Kim, Jez Humble and Dr. Nicole
-              Forsgren, who founded the DORA startup. The derived metrics can be
-              used by software teams to evaluate their peformance by comparing
-              the results of the metrics for themselves with the benchmarks
-              established by the DORA team. Each benchmark categorizes software
-              teams into elite, high, medium and low performing teams.
-            </Typography>
-            <Typography>
-              The metrics are:
-              <List>
-                <ListItem>Deployment Frequency</ListItem>
-                <ListItem>Lead Time for Changes</ListItem>
-                <ListItem>Mean Time to Recovery</ListItem>
-                <ListItem>Change Failure Rate</ListItem>
-              </List>
-            </Typography>
-            <Typography>
-              Adopting these metrics and tracking performance can highlight
-              areas which need improvement and aid in decision making.
-            </Typography>
-          </InfoCard>
-        </Grid>
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              <InfoCard>
-                <DeploymentFrequency />
-              </InfoCard>
-            </Grid>
-            <Grid item xs={6}>
-              <InfoCard>
-                <Typography>Lead Time for Changes</Typography>
-              </InfoCard>
-            </Grid>
-            <Grid item xs={6}>
-              <InfoCard>
-                <Typography>Mean Time to Recovery</Typography>
-              </InfoCard>
-            </Grid>
-            <Grid item xs={6}>
-              <InfoCard>
-                <ChangeFailureRate />
-              </InfoCard>
-            </Grid>
-          </Grid>
-        </Box>
-        <Grid item>
-          <Box display="flex" justifyContent="space-between">
-            <Button variant="contained" endIcon={<BarChart />}>
-              GO TO DASHBOARD
-            </Button>
-            <Button variant="contained" endIcon={<School />}>
-              GO TO LEARNING
-            </Button>
-          </Box>
-        </Grid>
+        <SimpleTabs />
       </Grid>
     </Content>
   </Page>
