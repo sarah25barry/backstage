@@ -17,7 +17,7 @@ import React, { Component } from 'react';
 import { Typography } from '@material-ui/core';
 import Chart from 'react-google-charts';
 
-import { changefail, getChangeFail, getCFRPerformance } from '../Tools/data';
+import { changefail, getChangeFail, getCFRPerformance } from '../../Tools/data';
 
 class ChangeFailureRate extends Component {
   render() {

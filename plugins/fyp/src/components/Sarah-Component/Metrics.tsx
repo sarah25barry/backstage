@@ -16,10 +16,10 @@
 import React, { Component } from 'react';
 import { Box, Grid } from '@material-ui/core';
 import { InfoCard } from '@backstage/core-components';
-import DeploymentFrequency from './Metrics/DeploymentFrequency';
-import LeadTimeForChanges from './Metrics/LeadTimeForChanges';
-import MeanTimeToRecovery from './Metrics/MeanTimeToRecovery';
-import ChangeFailureRate from './Metrics/ChangeFailureRate';
+import DeploymentFrequency from './Metrics/DeployFrequency/DeploymentFrequency';
+import LeadTimeForChanges from './Metrics/LeadTimeChanges/LeadTimeForChanges';
+import MeanTimeToRecovery from './Metrics/MeanTimeRecovery/MeanTimeToRecovery';
+import ChangeFailureRate from './Metrics/ChangeFail/ChangeFailureRate';
 
 class Metrics extends Component {
   render() {

@@ -15,45 +15,20 @@
  */
 import React, { Component } from 'react';
 import { Grid, Box } from '@material-ui/core';
-import { InfoCard } from '@backstage/core-components';
+import DFLearning from './Metrics/DeployFrequency/DFLearning';
+import LTFCLearning from './Metrics/LeadTimeChanges/LTFCLearning';
+import MTTRLearning from './Metrics/MeanTimeRecovery/MTTRLearning';
+import CFLearning from './Metrics/ChangeFail/CFLearning';
 
 class Learning extends Component {
   render() {
     return (
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <InfoCard>
-              <h3>Deployment Frequency</h3>
-              <h4>What</h4>
-              <h4>How</h4>
-              <h4>Evaluation</h4>
-            </InfoCard>
-          </Grid>
-          <Grid item xs={12}>
-            <InfoCard>
-              <h3>Lead Time for Changes</h3>
-              <h4>What</h4>
-              <h4>How</h4>
-              <h4>Evaluation</h4>
-            </InfoCard>
-          </Grid>
-          <Grid item xs={12}>
-            <InfoCard>
-              <h3>Mean Time to Recovery</h3>
-              <h4>What</h4>
-              <h4>How</h4>
-              <h4>Evaluation</h4>
-            </InfoCard>
-          </Grid>
-          <Grid item xs={12}>
-            <InfoCard>
-              <h3>Change Failure Rate</h3>
-              <h4>What</h4>
-              <h4>How</h4>
-              <h4>Evaluation</h4>
-            </InfoCard>
-          </Grid>
+          <DFLearning />
+          <LTFCLearning />
+          <MTTRLearning />
+          <CFLearning />
         </Grid>
       </Box>
     );

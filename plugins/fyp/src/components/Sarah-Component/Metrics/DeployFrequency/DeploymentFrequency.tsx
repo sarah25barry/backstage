@@ -18,7 +18,11 @@ import React, { Component } from 'react';
 import { Typography } from '@material-ui/core';
 import Chart from 'react-google-charts';
 
-import { data, getDeploymentFrequency, getDFPerformance } from '../Tools/data';
+import {
+  data,
+  getDeploymentFrequency,
+  getDFPerformance,
+} from '../../Tools/data';
 
 class DeploymentFrequency extends Component {
   render() {
