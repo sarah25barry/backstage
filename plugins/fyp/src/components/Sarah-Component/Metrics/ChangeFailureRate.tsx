@@ -13,55 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 import React, { Component } from 'react';
 import { Typography } from '@material-ui/core';
 import Chart from 'react-google-charts';
 
-import { data, getDeploymentFrequency, getDFPerformance } from './data';
+import { changefail, getChangeFail, getCFRPerformance } from '../Tools/data';
 
-class DeploymentFrequency extends Component {
+class ChangeFailureRate extends Component {
   render() {
     return (
       <div className="container mt-5">
-        <h2>Metric 1: Deployment Frequency</h2>
+        <h3>Metric 4: Change Failure Rate</h3>
 
         <Chart
-          width="400px"
+          width="600px"
           height="320px"
-          chartType="ColumnChart"
+          chartType="PieChart"
           loader={<div>Loading Chart...</div>}
-          data={data}
+          data={changefail}
           options={{
-            title: 'Deployment Frequency',
-            titleTextStyle: { color: 'lightgray' },
-            chartArea: { width: '90%' },
+            chartArea: { width: '70%' },
             animation: { startup: true },
-            hAxis: {
-              title: 'Weeks',
-              titleTextStyle: { color: 'lightgray', bold: true, italic: false },
-              minValue: 0,
-              textStyle: { color: 'lightgray' },
-            },
-            vAxis: {
-              title: 'Deployments per Week',
-              titleTextStyle: { color: 'lightgray', bold: true, italic: false },
-              bold: true,
-              textStyle: { color: 'lightgray ' },
-            },
+            pieHole: 0.4,
+            colors: ['#26961C', '#AE1F1F'],
             backgroundColor: { fill: 'transparent' },
-            colors: ['#26961C'],
             legendTextStyle: { color: 'lightgray' },
           }}
           rootProps={{ 'data-testid': '1' }}
         />
-        <Typography>
-          Average deployments per week: {getDeploymentFrequency()}
-        </Typography>
-        <Typography>Performance Result: {getDFPerformance()}</Typography>
+        <Typography>Change Failure Rate: {getChangeFail()}</Typography>
+        <Typography>Performance Result: {getCFRPerformance()}</Typography>
       </div>
     );
   }
 }
 
-export default DeploymentFrequency;
+export default ChangeFailureRate;
