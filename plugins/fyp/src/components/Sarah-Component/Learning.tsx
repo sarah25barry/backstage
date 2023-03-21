@@ -14,16 +14,7 @@
  * limitations under the License.
  */
 import React, { Component } from 'react';
-import {
-  Grid,
-  Box,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
 import { InfoCard } from '@backstage/core-components';
 
 class Learning extends Component {
