@@ -25,6 +25,7 @@ import Home from '@material-ui/icons/Home';
 import Learning from './Learning';
 import Metrics from './Metrics';
 import HomePage from './Home';
+import { SupportButton } from '@backstage/core-components';
 
 function TabPanel(props: {
   [x: string]: any;
@@ -98,6 +99,10 @@ export default function SimpleTabs() {
           <Tab label="Overview" icon={<Home />} {...a11yProps(0)} />
           <Tab label="Dashboard" icon={<BarChart />} {...a11yProps(1)} />
           <Tab label="Learning" icon={<School />} {...a11yProps(2)} />
+          <SupportButton>
+            If you'd like to report a problem on GitHub or join Spotify's
+            Discord, check out these links.
+          </SupportButton>
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
