@@ -14,38 +14,56 @@
  * limitations under the License.
  */
 import React, { Component } from 'react';
-import { Grid, List, ListItem, Typography } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 import { InfoCard } from '@backstage/core-components';
+
+import book from './Tools/img/book.png';
+import piechart from './Tools/img/piechart.png';
 
 class HomePage extends Component {
   render() {
     return (
-      <Grid item>
-        <InfoCard title="What are DORA Metrics?">
-          <Typography variant="body1">
-            DevOps and Research Assessment (DORA) metrics are a set of criteria
-            developed by Gene Kim, Jez Humble and Dr. Nicole Forsgren, who
-            founded the DORA startup. The derived metrics can be used by
-            software teams to evaluate their peformance by comparing the results
-            of the metrics for themselves with the benchmarks established by the
-            DORA team. Each benchmark categorizes software teams into elite,
-            high, medium and low performing teams.
-          </Typography>
-          <Typography>
-            The metrics are:
-            <List>
-              <ListItem>Deployment Frequency</ListItem>
-              <ListItem>Lead Time for Changes</ListItem>
-              <ListItem>Mean Time to Recovery</ListItem>
-              <ListItem>Change Failure Rate</ListItem>
-            </List>
-          </Typography>
-          <Typography>
-            Adopting these metrics and tracking performance can highlight areas
-            which need improvement and aid in decision making.
-          </Typography>
-        </InfoCard>
-      </Grid>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <InfoCard title="DORA Metrics Dashboard">
+              <Typography variant="body1">
+                DevOps and Research Assessment (DORA) metrics are a set of
+                metrics used by software teams to evaluate their peformance.
+              </Typography>
+              &nbsp;
+              <Typography>
+                The DORA Metrics Dashboard provides insights into a team's
+                performance (CH Robinson's DevOps team in this demonstration),
+                and evaulates their performance. Teams are catergorized into
+                elite, high, medium, or low performning criteria.
+              </Typography>
+            </InfoCard>
+          </Grid>
+          <Grid item xs={6}>
+            <InfoCard>
+              <Grid container alignItems="center" justifyContent="center">
+                <img src={piechart} alt="piechart" />
+                <Typography>
+                  &nbsp; To check out the dashboard, navigate to the 'Dashboard'
+                  tab!
+                </Typography>
+              </Grid>
+            </InfoCard>
+          </Grid>
+          <Grid item xs={6}>
+            <InfoCard>
+              <Grid container alignItems="center" justifyContent="center">
+                <img src={book} alt="book-icon" />
+                <Typography>
+                  &nbsp; To learn about the metrics, navigate to the 'Learning'
+                  tab!
+                </Typography>
+              </Grid>
+            </InfoCard>
+          </Grid>
+        </Grid>
+      </Box>
     );
   }
 }
