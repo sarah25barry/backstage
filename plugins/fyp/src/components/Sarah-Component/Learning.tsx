@@ -14,17 +14,52 @@
  * limitations under the License.
  */
 import React, { Component } from 'react';
-import { Grid, Box } from '@material-ui/core';
+import {
+  Grid,
+  Box,
+  List,
+  ListItem,
+  Typography,
+  Button,
+} from '@material-ui/core';
 import DFLearning from './Metrics/DeployFrequency/DFLearning';
 import LTFCLearning from './Metrics/LeadTimeChanges/LTFCLearning';
 import MTTRLearning from './Metrics/MeanTimeRecovery/MTTRLearning';
 import CFLearning from './Metrics/ChangeFail/CFLearning';
+import { InfoCard } from '@backstage/core-components';
 
 class Learning extends Component {
   render() {
     return (
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
+          <Grid item>
+            <InfoCard title="What are DORA Metrics?">
+              <Typography variant="body1">
+                DevOps and Research Assessment (DORA) metrics are a set of
+                criteria developed by Gene Kim, Jez Humble and Dr. Nicole
+                Forsgren, who founded the DORA startup. The derived metrics can
+                be used by software teams to evaluate their peformance by
+                comparing the results of the metrics for themselves with the
+                benchmarks established by the DORA team. Each benchmark
+                categorizes software teams into elite, high, medium and low
+                performing teams.
+              </Typography>
+              <Typography>
+                The metrics are:
+                <List>
+                  <ListItem>Deployment Frequency</ListItem>
+                  <ListItem>Lead Time for Changes</ListItem>
+                  <ListItem>Mean Time to Recovery</ListItem>
+                  <ListItem>Change Failure Rate</ListItem>
+                </List>
+              </Typography>
+              <Typography>
+                Adopting these metrics and tracking performance can highlight
+                areas which need improvement and aid in decision making.
+              </Typography>
+            </InfoCard>
+          </Grid>
           <DFLearning />
           <LTFCLearning />
           <MTTRLearning />
