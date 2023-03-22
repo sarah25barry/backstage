@@ -37,7 +37,9 @@ function chnagefailData(
   return { name, elite, high, medium, low };
 }
 
-const rows = [chnagefailData('Criteria', '0-15%', '0-15%', '0-15%', '46-60%')];
+const rows = [
+  chnagefailData('Change Failure Rate', '0-15%', '0-15%', '0-15%', '46-60%'),
+];
 
 class CFLearning extends Component {
   render() {
@@ -46,6 +48,10 @@ class CFLearning extends Component {
         <InfoCard>
           <h3>Change Failure Rate</h3>
           <h4>What</h4>
+          <Typography>
+            The percentage of deployments to production which needed
+            remediation.
+          </Typography>
           <h4>How</h4>
           <Typography>
             Count all deployments to production (both successful and failed) and

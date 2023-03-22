@@ -39,7 +39,7 @@ function leadTimeData(
 
 const rows = [
   leadTimeData(
-    'Criteria',
+    'Lead Time For Changes',
     'Less than one day',
     'Between one day and one week',
     'Between one week and one month',
@@ -54,6 +54,10 @@ class LTFCLearning extends Component {
         <InfoCard>
           <h3>Lead Time for Changes</h3>
           <h4>What</h4>
+          <Typography>
+            The average time it takes for a change to be made, from the first
+            commit on a branch to being deployed to production.
+          </Typography>
           <h4>How</h4>
           <Typography>
             Measure the time taken from when the first commit is made to a

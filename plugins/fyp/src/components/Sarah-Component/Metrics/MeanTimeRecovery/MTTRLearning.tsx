@@ -39,7 +39,7 @@ function recoveryData(
 
 const rows = [
   recoveryData(
-    'Criteria',
+    'Mean Time to Recover',
     'Less than one hour',
     'Less than one day',
     'Less than one day',
@@ -54,6 +54,9 @@ class MTTRLearning extends Component {
         <InfoCard>
           <h3>Mean Time to Recovery</h3>
           <h4>What</h4>
+          <Typography>
+            The average time it takes to recover fron an incident in production.
+          </Typography>
           <h4>How</h4>
           <Typography>
             Add total downtime from all incidents for a given period of time,

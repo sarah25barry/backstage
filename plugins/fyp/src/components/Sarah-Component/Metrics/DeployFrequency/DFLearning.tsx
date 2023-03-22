@@ -40,7 +40,7 @@ function deploymentData(
 
 const rows = [
   deploymentData(
-    'Criteria',
+    'Deployment Frequency',
     'Multiple times per day',
     'Once per day - once per week',
     'Once per week - once per month',
@@ -55,6 +55,10 @@ class DFLearning extends Component {
         <InfoCard>
           <h3>Deployment Frequency</h3>
           <h4>What</h4>
+          <Typography>
+            The rate at which code is successfully deployed to a production
+            environment.
+          </Typography>
           <h4>How</h4>
           <Typography>
             Count all successful deployments to production for a given period of
