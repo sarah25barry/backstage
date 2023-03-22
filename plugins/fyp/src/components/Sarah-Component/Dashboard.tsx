@@ -16,14 +16,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 
-import {
-  Header,
-  Page,
-  Content,
-  ContentHeader,
-  HeaderLabel,
-  SupportButton,
-} from '@backstage/core-components';
+import { Header, Page, Content, HeaderLabel } from '@backstage/core-components';
 import SimpleTabs from './Tabs';
 
 export const Dashboard = () => (
@@ -36,12 +29,6 @@ export const Dashboard = () => (
       <HeaderLabel label="Student Number" value="119482126" />
     </Header>
     <Content>
-      <ContentHeader title="DORA Metrics">
-        <SupportButton>
-          If you'd like to report a problem on GitHub or join Spotify's Discord,
-          check out these links.
-        </SupportButton>
-      </ContentHeader>
       <Grid container spacing={2} direction="column">
         <SimpleTabs />
       </Grid>
