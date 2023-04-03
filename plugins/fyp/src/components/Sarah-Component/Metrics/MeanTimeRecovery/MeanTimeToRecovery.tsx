@@ -15,15 +15,51 @@
  */
 import React, { Component } from 'react';
 import { Typography } from '@material-ui/core';
+import Chart from 'react-google-charts';
+
+import {
+  getMeanTimeToRecover,
+  getMTTRPerformance,
+  getMTTRColor,
+} from '../../Tools/UseData';
+import { mttr_data } from '../../Tools/data';
 
 class MeanTimeToRecovery extends Component {
   render() {
     return (
       <div className="container mt-5">
-        <h2>Metric 3: Mean Time to Recovery</h2>
-
-        <Typography>Mean Time to Recovery:</Typography>
-        <Typography>Performance Result: </Typography>
+        <h3>Metric 3: Mean Time to Recovery</h3>
+        <Chart
+          width="475px"
+          height="320px"
+          chartType="ColumnChart"
+          loader={<div>Loading Chart...</div>}
+          data={mttr_data}
+          options={{
+            chartArea: { width: '90%' },
+            animation: { startup: true },
+            hAxis: {
+              title: 'Repos',
+              titleTextStyle: { color: 'lightgray', bold: true, italic: false },
+              minValue: -1,
+              textStyle: { color: 'lightgray' },
+            },
+            vAxis: {
+              title: 'Days to Recover',
+              titleTextStyle: { color: 'lightgray', bold: true, italic: false },
+              bold: true,
+              textStyle: { color: 'lightgray ' },
+            },
+            backgroundColor: { fill: 'transparent' },
+            colors: [getMTTRColor()],
+            legendTextStyle: { color: 'lightgray' },
+          }}
+          rootProps={{ 'data-testid': '1' }}
+        />
+        <Typography>
+          Mean Time to Recovery: {getMeanTimeToRecover().toFixed(2)} hour(s)
+        </Typography>
+        <Typography>Performance Result: {getMTTRPerformance()}</Typography>
       </div>
     );
   }
