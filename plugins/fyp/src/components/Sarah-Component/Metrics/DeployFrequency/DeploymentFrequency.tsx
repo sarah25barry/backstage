@@ -19,10 +19,11 @@ import { Typography } from '@material-ui/core';
 import Chart from 'react-google-charts';
 
 import {
-  data,
   getDeploymentFrequency,
   getDFPerformance,
-} from '../../Tools/data';
+  getDFColor,
+} from '../../Tools/UseData';
+import { deployment_data } from '../../Tools/data';
 
 class DeploymentFrequency extends Component {
   render() {
@@ -31,11 +32,11 @@ class DeploymentFrequency extends Component {
         <h3>Metric 1: Deployment Frequency</h3>
 
         <Chart
-          width="400px"
+          width="475px"
           height="320px"
           chartType="ColumnChart"
           loader={<div>Loading Chart...</div>}
-          data={data}
+          data={deployment_data}
           options={{
             chartArea: { width: '90%' },
             animation: { startup: true },
@@ -52,13 +53,13 @@ class DeploymentFrequency extends Component {
               textStyle: { color: 'lightgray ' },
             },
             backgroundColor: { fill: 'transparent' },
-            colors: ['#26961C'],
+            colors: [getDFColor()],
             legendTextStyle: { color: 'lightgray' },
           }}
           rootProps={{ 'data-testid': '1' }}
         />
         <Typography>
-          Average deployments per week: {getDeploymentFrequency()}
+          Average deployments per week: {getDeploymentFrequency().toFixed(2)}
         </Typography>
         <Typography>Performance Result: {getDFPerformance()}</Typography>
       </div>

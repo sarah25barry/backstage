@@ -17,7 +17,8 @@ import React, { Component } from 'react';
 import { Typography } from '@material-ui/core';
 import Chart from 'react-google-charts';
 
-import { changefail, getChangeFail, getCFRPerformance } from '../../Tools/data';
+import { getChangeFail, getCFRPerformance } from '../../Tools/UseData';
+import { changefail } from '../../Tools/data';
 
 class ChangeFailureRate extends Component {
   render() {
@@ -26,7 +27,7 @@ class ChangeFailureRate extends Component {
         <h3>Metric 4: Change Failure Rate</h3>
 
         <Chart
-          width="600px"
+          width="620px"
           height="320px"
           chartType="PieChart"
           loader={<div>Loading Chart...</div>}
@@ -41,7 +42,9 @@ class ChangeFailureRate extends Component {
           }}
           rootProps={{ 'data-testid': '1' }}
         />
-        <Typography>Change Failure Rate: {getChangeFail()}</Typography>
+        <Typography>
+          Change Failure Rate: {getChangeFail().toFixed(2)}%
+        </Typography>
         <Typography>Performance Result: {getCFRPerformance()}</Typography>
       </div>
     );
