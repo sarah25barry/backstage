@@ -24,7 +24,7 @@ import ChangeFailureRate from './Metrics/ChangeFail/ChangeFailureRate';
 class Metrics extends Component {
   render() {
     return (
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1 }} alignItems="center" justifyContent="center">
         <Grid container spacing={2}>
           <Grid item xs={6}>
             <InfoCard>
