@@ -14,14 +14,7 @@
  * limitations under the License.
  */
 import React, { Component } from 'react';
-import {
-  Grid,
-  Box,
-  List,
-  ListItem,
-  Typography,
-  Button,
-} from '@material-ui/core';
+import { Grid, Box, List, ListItem, Typography } from '@material-ui/core';
 import DFLearning from './Metrics/DeployFrequency/DFLearning';
 import LTFCLearning from './Metrics/LeadTimeChanges/LTFCLearning';
 import MTTRLearning from './Metrics/MeanTimeRecovery/MTTRLearning';
@@ -39,7 +32,7 @@ class Learning extends Component {
                 DevOps and Research Assessment (DORA) metrics are a set of
                 criteria developed by Gene Kim, Jez Humble and Dr. Nicole
                 Forsgren, who founded the DORA startup. The derived metrics can
-                be used by software teams to evaluate their peformance by
+                be used by software teams to evaluate their performance by
                 comparing the results of the metrics for themselves with the
                 benchmarks established by the DORA team. Each benchmark
                 categorizes software teams into elite, high, medium and low
