@@ -111,7 +111,7 @@ class HomePage extends Component {
               <Typography>
                 While this plugin focuses on the four DORA metrics currently,
                 new metrics can be added to suit a team's needs following the
-                structure set out in the '/Metrics' directory of the plugin's
+                structure set out in the '/Metrics' subfolder of the plugin's
                 directory.
               </Typography>
               <Typography variant="body2">
