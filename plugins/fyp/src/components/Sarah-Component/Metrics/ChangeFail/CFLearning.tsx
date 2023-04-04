@@ -49,13 +49,13 @@ class CFLearning extends Component {
           <h3>Change Failure Rate</h3>
           <h4>What</h4>
           <Typography>
-            The percentage of deployments to production which needed
-            remediation.
+            The percentage of deployments to production that results in needing
+            some form of remediation.
           </Typography>
           <h4>How</h4>
           <Typography>
             Count all deployments to production (both successful and failed) and
-            get the percentage of which that needed remediation or caused
+            get the percentage of deployments that needed remediation or caused
             errors.
           </Typography>
           <h4>Evaluation</h4>
