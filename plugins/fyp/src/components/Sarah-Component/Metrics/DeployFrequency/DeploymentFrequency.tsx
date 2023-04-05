@@ -30,7 +30,6 @@ class DeploymentFrequency extends Component {
     return (
       <div className="container mt-5">
         <h3>Metric 1: Deployment Frequency</h3>
-
         <Chart
           width="475px"
           height="320px"
@@ -59,7 +58,7 @@ class DeploymentFrequency extends Component {
           rootProps={{ 'data-testid': '1' }}
         />
         <Typography>
-          Average deployments per week: {getDeploymentFrequency().toFixed(2)}
+          Deployment Frequency: {getDeploymentFrequency().toFixed(2)}
         </Typography>
         <Typography>Performance Result: {getDFPerformance()}</Typography>
       </div>
