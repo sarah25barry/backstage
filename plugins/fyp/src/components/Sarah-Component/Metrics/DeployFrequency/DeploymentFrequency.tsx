@@ -31,29 +31,28 @@ class DeploymentFrequency extends Component {
       <div className="container mt-5">
         <h3>Metric 1: Deployment Frequency</h3>
         <Chart
-          width="475px"
+          width="100%"
           height="320px"
           chartType="ColumnChart"
           loader={<div>Loading Chart...</div>}
           data={deployment_data}
           options={{
-            chartArea: { width: '90%' },
+            chartArea: { width: '85%' },
             animation: { startup: true },
             hAxis: {
-              title: 'Weeks',
-              titleTextStyle: { color: 'lightgray', bold: true, italic: false },
-              minValue: 0,
-              textStyle: { color: 'lightgray' },
+              title: 'Week',
+              titleTextStyle: { color: 'black', bold: true, italic: false },
+              textStyle: { color: 'black' },
             },
             vAxis: {
-              title: 'Deployments per Week',
-              titleTextStyle: { color: 'lightgray', bold: true, italic: false },
+              title: 'Deployments',
+              titleTextStyle: { color: 'black', bold: true, italic: false },
               bold: true,
-              textStyle: { color: 'lightgray ' },
+              textStyle: { color: 'black ' },
             },
             backgroundColor: { fill: 'transparent' },
             colors: [getDFColor()],
-            legendTextStyle: { color: 'lightgray' },
+            legend: { position: 'none' },
           }}
           rootProps={{ 'data-testid': '1' }}
         />

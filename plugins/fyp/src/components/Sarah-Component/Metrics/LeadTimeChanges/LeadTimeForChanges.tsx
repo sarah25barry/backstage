@@ -30,31 +30,28 @@ class LeadTimeForChanges extends Component {
       <div className="container mt-5">
         <h3>Metric 2: Lead Time for Changes</h3>
         <Chart
-          width="475px"
+          width="100%"
           height="320px"
           chartType="ColumnChart"
           loader={<div>Loading Chart...</div>}
           data={ltfc_data}
           options={{
-            chartArea: { width: '90%' },
+            chartArea: { width: '85%' },
             animation: { startup: true },
             hAxis: {
-              title: 'Repositories',
-              titleTextStyle: { color: 'lightgray', bold: true, italic: false },
-              minValue: 0,
-              textStyle: { color: 'lightgray' },
+              title: 'Repository Name',
+              titleTextStyle: { color: 'black', bold: true, italic: false },
+              textStyle: { color: 'black' },
             },
             vAxis: {
-              title: 'Lead Time for Changes in Days',
-              titleTextStyle: { color: 'lightgray', bold: true, italic: false },
+              title: 'Lead Time for Changes',
+              titleTextStyle: { color: 'black', bold: true, italic: false },
               bold: true,
-              minValue: 0,
-              maxValue: getLeadTimeForChanges() * 1.5,
-              textStyle: { color: 'lightgray ' },
+              textStyle: { color: 'black ' },
             },
             backgroundColor: { fill: 'transparent' },
             colors: [getLTFCColor()],
-            legendTextStyle: { color: 'lightgray' },
+            legend: { position: 'none' },
           }}
           rootProps={{ 'data-testid': '1' }}
         />

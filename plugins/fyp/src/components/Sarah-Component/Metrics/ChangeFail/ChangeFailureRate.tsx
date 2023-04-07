@@ -27,18 +27,18 @@ class ChangeFailureRate extends Component {
         <h3>Metric 4: Change Failure Rate</h3>
 
         <Chart
-          width="620px"
+          width="100%"
           height="320px"
           chartType="PieChart"
           loader={<div>Loading Chart...</div>}
           data={changefail}
           options={{
-            chartArea: { width: '70%' },
+            chartArea: { width: '60%' },
             animation: { startup: true },
             pieHole: 0.4,
             colors: ['#26961C', '#AE1F1F'],
             backgroundColor: { fill: 'transparent' },
-            legendTextStyle: { color: 'lightgray' },
+            legendTextStyle: { color: 'black' },
           }}
           rootProps={{ 'data-testid': '1' }}
         />

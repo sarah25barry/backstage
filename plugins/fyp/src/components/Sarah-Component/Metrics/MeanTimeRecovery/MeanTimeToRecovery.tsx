@@ -30,29 +30,28 @@ class MeanTimeToRecovery extends Component {
       <div className="container mt-5">
         <h3>Metric 3: Mean Time to Recovery</h3>
         <Chart
-          width="475px"
+          width="100%"
           height="320px"
           chartType="ColumnChart"
           loader={<div>Loading Chart...</div>}
           data={mttr_data}
           options={{
-            chartArea: { width: '90%' },
+            chartArea: { width: '85%' },
             animation: { startup: true },
             hAxis: {
               title: 'Repos',
-              titleTextStyle: { color: 'lightgray', bold: true, italic: false },
-              minValue: -1,
-              textStyle: { color: 'lightgray' },
+              titleTextStyle: { color: 'black', bold: true, italic: false },
+              textStyle: { color: 'black' },
             },
             vAxis: {
               title: 'Days to Recover',
-              titleTextStyle: { color: 'lightgray', bold: true, italic: false },
+              titleTextStyle: { color: 'black', bold: true, italic: false },
               bold: true,
-              textStyle: { color: 'lightgray ' },
+              textStyle: { color: 'black ' },
             },
             backgroundColor: { fill: 'transparent' },
             colors: [getMTTRColor()],
-            legendTextStyle: { color: 'lightgray' },
+            legend: { position: 'none' },
           }}
           rootProps={{ 'data-testid': '1' }}
         />
