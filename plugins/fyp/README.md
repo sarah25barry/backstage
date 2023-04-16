@@ -55,3 +55,8 @@ As the plugin is meant to be used with GitHub and Azure DevOps (ADO) Pipelines, 
 The definition ID can be found in the URL of a given pipeline's run.
 
 ![URL of where to find the definition ID](url.png)
+
+To connect to [GitHub](https://docs.github.com/en/rest?apiVersion=2022-11-28) and [Azure Pipelines](https://learn.microsoft.com/en-us/rest/api/azure/devops/build/?view=azure-devops-rest-7.0) you will need personal access tokens (PATs). Details on how to create and use them can be found here:
+
+- [GitHub](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- [Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows)
