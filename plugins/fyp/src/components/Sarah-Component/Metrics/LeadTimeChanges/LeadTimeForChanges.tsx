@@ -47,7 +47,7 @@ class LeadTimeForChanges extends Component {
               title: 'Lead Time for Changes',
               titleTextStyle: { color: 'black', bold: true, italic: false },
               bold: true,
-              textStyle: { color: 'black ' },
+              textStyle: { color: 'black' },
             },
             backgroundColor: { fill: 'transparent' },
             colors: [getLTFCColor()],

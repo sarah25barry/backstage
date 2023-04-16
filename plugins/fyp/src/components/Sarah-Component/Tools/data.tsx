@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export const freq = [10, 4, 13, 11, 11];
+export const freq = [20, 8, 26, 22, 22];
 export const deployment_data = [
   ['Week', 'Deployments'],
-  ['2023-01-30', 10],
-  ['2023-02-06', 4],
-  ['2023-02-13', 13],
-  ['2023-02-20', 11],
-  ['2023-02-27', 11],
+  ['2023-01-30', 20],
+  ['2023-02-06', 8],
+  ['2023-02-13', 26],
+  ['2023-02-20', 22],
+  ['2023-02-27', 22],
 ];
-export const passed = 1;
+export const passed = 50;
 export const failed = 48;
 export const changefail = [
   ['Outcome', 'Volume'],
-  ['Passed', 1],
+  ['Passed', 50],
   ['Failed', 48],
 ];
 export const repo_ltfc = [1, 1, 1, 1, 1, 1];

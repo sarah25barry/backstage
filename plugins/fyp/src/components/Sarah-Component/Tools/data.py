@@ -13,4 +13,4 @@ d10 = date(2023, 3, 5)
 
 dates = {"week1" : [d1.strftime("%Y-%m-%d"), d2.strftime("%Y-%m-%d")], "week2" : [d3.strftime("%Y-%m-%d"), d4.strftime("%Y-%m-%d")], "week3": [d5.strftime("%Y-%m-%d"), d6.strftime("%Y-%m-%d")], "week4": [d7.strftime("%Y-%m-%d"), d8.strftime("%Y-%m-%d")], "week5" : [d9.strftime("%Y-%m-%d"), d10.strftime("%Y-%m-%d")]}
 
-definitionIds = {"devops-dylon-react-test" : 4283 }
+definitionIds = {"repo one" : 4012, "repo two" : 3809, "repo three" : 2486, "repo four" : 2671, "repo five" : 4336, "repo six" : 3831}

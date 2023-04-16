@@ -44,7 +44,7 @@ class MeanTimeToRecovery extends Component {
               textStyle: { color: 'black' },
             },
             vAxis: {
-              title: 'Days to Recover',
+              title: 'Hours to Recover',
               titleTextStyle: { color: 'black', bold: true, italic: false },
               bold: true,
               textStyle: { color: 'black ' },

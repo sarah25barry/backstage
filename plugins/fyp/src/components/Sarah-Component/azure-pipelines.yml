@@ -1,0 +1,26 @@
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: 'sarah25barry/sarah-backstage'
+      endpoint: 'GitHub - CH Robinson Internal'
+      ref: 'refs/head/master'
+
+trigger:
+  - main
+  - FYP
+
+schedules:
+  - cron: '0 6 * * *'
+    displayName: Daily scan of repositories
+    branches:
+      include:
+        - main
+        - FYP
+    always: true
+
+steps:
+  - task: PythonScript@0
+    inputs:
+      scriptSource: 'filePath'
+      scriptPath: '/Tools/get_data.py'
