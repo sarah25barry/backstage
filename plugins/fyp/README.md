@@ -54,4 +54,4 @@ As the plugin is meant to be used with GitHub and Azure DevOps (ADO) Pipelines, 
 
 The definition ID can be found in the URL of a given pipeline's run.
 
-!(URL of where to find the definition ID)[url.png]
+![URL of where to find the definition ID](url.png)
