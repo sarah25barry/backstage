@@ -40,6 +40,8 @@ The learning tab contains information on the metrics as a whole, as well as prov
 
 ## Using the Plugin Locally
 
+Before using the plugin, you can run `yarn install` in the root directory to install all of the dependencies for the project. This single command will download all the essential dependecies which are set out in the `./package.json` file of the directory.
+
 You can access the plugin by running `yarn start` in the root directory, and then navigating to [/fyp](http://localhost:3000/fyp) for local development.
 
 You can also serve the plugin in isolation by running `yarn start` in the plugin directory.
